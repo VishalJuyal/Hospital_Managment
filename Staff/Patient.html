@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="staff.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#newrows").click(function () {
+                var addcontrols = "<tr>"
+                addcontrols += "<td><input text='text' name='Id' placeholder='Enter Id ..'></td>"
+                addcontrols += "<td><input text='text' name='Patient name' placeholder='Enter Patient name..'></td>"
+                addcontrols += "<td><input text='text' name='Problem(illness)' placeholder='Enter illness ..'></td>"
+                addcontrols += "<td><input text='text' name='Doctor' placeholder='Enter Doctor Name ..'></td>"
+                addcontrols += "<td><input text='text' name='Phone no.' placeholder='Enter Phone no. ..'></td>"
+                addcontrols += "<td><input type='button' name='Edit'..'></td>"
+                addcontrols += "</tr>";
+                $("table tbody").append(addcontrols);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Hospital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="d-flex">
+                        <a class="nav-link " aria-current="page" href="/index.html">Logout</a>
+                    </li>
+                    <li class="d-flex">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link" href="#">About</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+    <div class="wrapper">
+        <div class="sidebar">
+            <a href="Staff.html">
+                <h2>Staff Interface</h2>
+            </a>
+            <ul>
+                <li><a href="Patient.html"><i class="fas fa-home"></i>View, Add & Edit Patient</a></li>
+                <li><a href="#about"><i class="fas fa-address-card"></i>About</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i>Contact</a></li>
+                <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="card">
+                <div class="card-body">
+                    <h5 style="color:white;" class="card-title">Patients Detail</h5>
+                </div>
+            </div>
+            <table class="table table-dark table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Patient name</th>
+                        <th scope="col"> Problem(illness)</th>
+                        <th scope="col"> Doctor</th>
+                        <th scope="col">Phone no.</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Vishal</td>
+                        <td>Headache</td>
+                        <td>Dr.Mehra</td>
+                        <td>+91 782221138</td>
+                        <td class="float-right">
+                            <button type="button" class="btn btn-primary" style="width:80px">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Arpit</td>
+                        <td>Patches</td>
+                        <td>Dr.Ojha</td>
+                        <td>+91 9112221138</td>
+                        <td class="float-right">
+                            <button type="button" class="btn btn-primary" style="width:80px">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Rahul</td>
+                        <td>Heart Problem</td>
+                        <td>Mr.Mehra</td>
+                        <td>+91 9812221138</td>
+                        <td class="float-right">
+                            <button type="button" class="btn btn-primary" style="width:80px">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Tarun</td>
+                        <td>Fungal Infection</td>
+                        <td>Mr.Sanchit</td>
+                        <td>+91 8332221138</td>
+                        <td class="float-right">
+                            <button type="button" class="btn btn-primary" style="width:80px">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Oman</td>
+                        <td>Fracture</td>
+                        <td>Mr.Pehlwan</td>
+                        <td>+91 8882221138</td>
+                        <td class="float-right">
+                            <button type="button" class="btn btn-primary" style="width:80px">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <td colspan="3"><input type="button" class="btn btn-danger" value="Add New Row" id="newrows"></td>
+        
+        </div>  
+        <script src="script.js"></script>
+</body>
+
+</html>

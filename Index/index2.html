@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hospital Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function myfunction() {
+      var un = document.forms["myForm"]["Uname"].value;
+      var pw = document.forms["myForm"]["Pass"].value;
+      if (un == "Admin" && pw == "1234") {
+        window.location.href = "/Admin/Admin.html";
+      }
+      else if (un == "Doctor" && pw == "1234") {
+        window.location.href = "/Doctor/Doctor.html"
+      }
+      else if (un == "Staff" && pw == "1234") {
+        window.location.href = "/Staff/Staff.html"
+      }
+      else {
+        alert("Invalid Username and Password")
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="/index.html" class="logo"> <i class="fas fa-heartbeat fixed"></i>  St.Hospital </a>
+
+    <nav class="navbar">
+        <a href="/index.html">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#doctors">doctors</a>
+        <a href="#book">book</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+        <a href="/Index/index2.html">Login</a>
+
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+
+  <div class="center">
+    <h1>Login</h1>
+    <form name="myForm" method="post">
+      <div class="txt_field">
+        <input type="text" name="Uname" class="inputText" placeholder="Staff/Doctor/Admin" required>
+
+      </div>
+      <div class="txt_field">
+        <input type="password" name="Pass" class="inputText" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass"> password hint-1234 <br> Forgot  Password?</div>
+      <input type="button" name="log" id="logButton" value="Login" onclick="myfunction()">
+  </div>
+  </form>
+  </div>
+</body>
+<script src="/js/script.js"></script>
+
+</html>
